@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-
 @WebServlet("/GASTestServlet")
 public class GASTestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	response.setContentType("text/html; charset=UTF-8");
+        // リクエストの文字エンコーディングを設定
+        request.setCharacterEncoding("UTF-8");
+
         // リクエストパラメータを取得
         String title = request.getParameter("title");
         String startDate = request.getParameter("startDate");
